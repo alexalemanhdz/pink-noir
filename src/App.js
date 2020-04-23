@@ -1,30 +1,20 @@
 import React from 'react';
 import './App.css';
+
 import workLinks from './work-links';
 import funLinks from './fun-links';
 
-const displayMapping = (linksArray) => linksArray.map((link) => (
-  <li key={`work-link-${link.id}`}>
-    <a href={link.url}>{link.displayName}</a>
-  </li>
-));
+import LinksTab from './components/LinksTab';
 
 function App() {
-  const workDisplayLinks = displayMapping(workLinks);
-  const funDisplayLinks = displayMapping(funLinks);
-
   return (
     <div className="App">
       <header className="App-header">
-        <div className="Tab-container">
-          <div className="Work-tab">
-            <ul>{workDisplayLinks}</ul>
-          </div>
-          <div className="Fun-tab">
-            <ul>{funDisplayLinks}</ul>
-          </div>
+        <div className="tab-container">
+          <LinksTab key="work" links={workLinks} />
+          <LinksTab key="fun" links={funLinks} />
         </div>
-        <div className="Media-container" />
+        <div className="media-container" />
       </header>
     </div>
   );
