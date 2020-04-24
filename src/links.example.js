@@ -1,9 +1,22 @@
-// Create both files work-links.js and fun-links.js, and use this format
-
 export default [
   {
-    id: 'google',
-    displayName: 'google',
-    url: 'https://google.com',
+    tabName: 'work',
+    tabContent: [
+      {
+        id: 'google',
+        displayName: 'Google',
+        url: 'https://google.com',
+      },
+    ],
+  },
+  {
+    tabName: 'fun',
+    tabContent: [
+      {
+        id: 'finance',
+        displayName: 'Finance',
+        url: 'https://finance.yahoo.com',
+      },
+    ],
   },
 ];

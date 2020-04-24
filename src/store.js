@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 
 const initialState = {
-  // Add your states here
+  selectedTab: 1,
 };
 
 function reducer(state = initialState, action) {

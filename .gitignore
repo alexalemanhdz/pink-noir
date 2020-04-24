@@ -23,5 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # custom links
-work-links.js
-fun-links.js
+links.js

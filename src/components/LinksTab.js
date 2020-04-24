@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../styles/LinksTab.css';
+
 function LinksTab(props) {
   const displayMapping = (linksArray) => linksArray.map((link) => (
     <li key={`work-link-${link.id}`}>
@@ -8,7 +10,7 @@ function LinksTab(props) {
   ));
 
   return (
-    <div key={`${props.key}-tab`} className="links-tab">
+    <div className="links-tab">
       <ul>{displayMapping(props.links)}</ul>
     </div>
   );
