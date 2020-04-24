@@ -9,9 +9,27 @@ function LinksTab(props) {
     </li>
   ));
 
+  const { maxTabs, maxWidth } = props;
+  const tabWidth = maxWidth / maxTabs;
+
   return (
-    <div className="links-tab">
-      <h1 className="tab-title" style={{ marginLeft: props.index * 80 }}>{props.tabName}</h1>
+    <div
+      className="links-tab"
+      style={{
+        width: 480,
+      }}
+    >
+      <h1
+        className="tab-title"
+        style={{
+          marginLeft: props.index * (tabWidth - 5),
+          maxWidth: tabWidth,
+          minWidth: tabWidth,
+          zIndex: 10 + props.index,
+        }}
+      >
+        {props.tabName}
+      </h1>
       <ul className="links-list">{displayMapping(props.links)}</ul>
     </div>
   );

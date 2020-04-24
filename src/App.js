@@ -14,13 +14,15 @@ function App() {
       key={`${link.tabName}-tab`}
       tabName={link.tabName}
       links={link.tabContent}
+      maxTabs={6}
+      maxWidth={480}
     />
   ));
 
   return (
     <div className="App">
       <header className="App-header">
-        <div className="tab-container" style={{ width: '100%' }}>
+        <div className="tab-container">
           {tabs}
         </div>
         <div className="media-container" />

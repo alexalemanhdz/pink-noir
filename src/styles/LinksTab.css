@@ -1,16 +1,17 @@
 .links-tab {
   position: absolute;
-  width: 500px;
 }
 
 .tab-title {
   background: rgb(255,255,255);
   background: linear-gradient(46deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%); 
+  border-left-color: black;
+  border-left-style: solid;
+  border-left-width: 1px;
   color: black;
   font-family: monospace;
   font-size: 12px;
   font-weight: normal;
-  max-width: 80px;
   padding-left: 10px;
   text-align: left;
 }
