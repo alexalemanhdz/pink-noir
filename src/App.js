@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { connect } from 'react-redux';
-
 import links from './links';
 
 import './App.css';
@@ -13,8 +11,6 @@ function App() {
       index={index}
       key={`${link.tabName}-tab`}
       tabName={link.tabName}
-      maxTabs={6}
-      maxWidth={480}
     />
   ));
 
@@ -36,4 +32,4 @@ function App() {
   );
 }
 
-export default connect()(App);
+export default App;

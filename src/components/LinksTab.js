@@ -1,9 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import '../styles/LinksTab.css';
 
 function LinksTab(props) {
-  const { maxTabs, maxWidth } = props;
+  const {
+    index,
+    maxTabs,
+    maxWidth,
+    tabName,
+  } = props;
   const tabWidth = maxWidth / maxTabs;
 
   return (
@@ -16,16 +22,28 @@ function LinksTab(props) {
       <h1
         className="tab-title"
         style={{
-          left: props.index * (tabWidth - 5),
+          left: index * (tabWidth - 5),
           maxWidth: tabWidth,
           minWidth: tabWidth,
-          zIndex: 10 + props.index,
+          zIndex: 10 + index,
         }}
       >
-        {props.tabName}
+        {tabName}
       </h1>
     </div>
   );
 }
+
+LinksTab.propTypes = {
+  index: PropTypes.number.isRequired,
+  maxTabs: PropTypes.number,
+  maxWidth: PropTypes.number,
+  tabName: PropTypes.string.isRequired,
+};
+
+LinksTab.defaultProps = {
+  maxTabs: 6,
+  maxWidth: 480,
+};
 
 export default LinksTab;
