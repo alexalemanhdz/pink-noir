@@ -13,7 +13,6 @@ function App() {
       index={index}
       key={`${link.tabName}-tab`}
       tabName={link.tabName}
-      links={link.tabContent}
       maxTabs={6}
       maxWidth={480}
     />
@@ -25,7 +24,13 @@ function App() {
         <div className="tab-container">
           {tabs}
         </div>
-        <div className="media-container" />
+        <div
+          className="tab-content"
+          style={{
+            height: 300,
+            width: 480,
+          }}
+        />
       </header>
     </div>
   );
