@@ -11,7 +11,8 @@ function LinksTab(props) {
 
   return (
     <div className="links-tab">
-      <ul>{displayMapping(props.links)}</ul>
+      <h1 className="tab-title" style={{ marginLeft: props.index * 80 }}>{props.tabName}</h1>
+      <ul className="links-list">{displayMapping(props.links)}</ul>
     </div>
   );
 }

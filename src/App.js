@@ -8,12 +8,19 @@ import './App.css';
 import LinksTab from './components/LinksTab';
 
 function App() {
-  const tabs = links.map((link) => <LinksTab key={`${link.tabName}-tab`} links={link.tabContent} />);
+  const tabs = links.map((link, index) => (
+    <LinksTab
+      index={index}
+      key={`${link.tabName}-tab`}
+      tabName={link.tabName}
+      links={link.tabContent}
+    />
+  ));
 
   return (
     <div className="App">
       <header className="App-header">
-        <div className="tab-container">
+        <div className="tab-container" style={{ width: '100%' }}>
           {tabs}
         </div>
         <div className="media-container" />
