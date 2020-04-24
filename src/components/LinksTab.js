@@ -22,7 +22,7 @@ function LinksTab(props) {
       <h1
         className="tab-title"
         style={{
-          marginLeft: props.index * (tabWidth - 5),
+          left: props.index * (tabWidth - 5),
           maxWidth: tabWidth,
           minWidth: tabWidth,
           zIndex: 10 + props.index,

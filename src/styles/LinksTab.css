@@ -9,13 +9,22 @@
   border-left-style: solid;
   border-left-width: 1px;
   color: black;
+  cursor: pointer;
   font-family: monospace;
   font-size: 12px;
   font-weight: normal;
+  margin: 0;
   padding-left: 10px;
+  position: absolute;
   text-align: left;
+  top: -15px;
 }
 
 .links-list {
-  background-color: #ffffff88;
+  background-color: #ffffff;
+  border-left-color: black;
+  border-left-style: solid;
+  border-left-width: 1px;
+  margin: 0;
+  z-index: 1;
 }
