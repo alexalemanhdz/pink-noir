@@ -19,7 +19,7 @@ function LinksTab(props) {
     <div
       className="links-tab"
       style={{
-        width: 480,
+        width: maxWidth,
       }}
     >
       <h1

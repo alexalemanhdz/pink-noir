@@ -4,9 +4,11 @@ import links from './links';
 import './App.css';
 import LinksTab from './components/LinksTab';
 import LinksDisplay from './components/LinksDisplay';
+import MediaContainer from './components/MediaContainer';
 
 function App(props) {
   const maxTabs = 6;
+  const maxWidth = 500;
 
   const tabs = links.map((link, index) => {
     if (index < maxTabs) {
@@ -16,6 +18,7 @@ function App(props) {
           key={`${link.tabName}-tab`}
           tabName={link.tabName}
           maxTabs={maxTabs}
+          maxWidth={maxWidth}
         />
       );
     }
@@ -25,18 +28,21 @@ function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="tab-container">
-          {tabs}
+        <div className="container">
+          <div className="tab-container">
+            {tabs}
+          </div>
+          <div
+            className="tab-content"
+            style={{
+              height: 300,
+              width: maxWidth,
+            }}
+          >
+            <LinksDisplay linksList={links[props.currentTab].tabContent} />
+          </div>
         </div>
-        <div
-          className="tab-content"
-          style={{
-            height: 300,
-            width: 480,
-          }}
-        >
-          <LinksDisplay linksList={links[props.currentTab].tabContent} />
-        </div>
+        <MediaContainer currentTab={props.currentTab} />
       </header>
     </div>
   );
