@@ -1,9 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import links from './links';
 import './App.css';
 import LinksTab from './components/LinksTab';
+import LinksDisplay from './components/LinksDisplay';
 
-function App() {
+function App(props) {
   const maxTabs = 6;
 
   const tabs = links.map((link, index) => {
@@ -32,10 +34,17 @@ function App() {
             height: 300,
             width: 480,
           }}
-        />
+        >
+          <LinksDisplay linksList={links[props.currentTab].tabContent} />
+        </div>
       </header>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  const { currentTab } = state.tabs;
+  return { currentTab };
+};
+
+export default connect(mapStateToProps)(App);
