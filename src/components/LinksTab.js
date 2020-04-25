@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { connect } from 'react-redux';
+import { changeTab } from '../redux/reducers';
 import '../styles/LinksTab.css';
 
 function LinksTab(props) {
@@ -46,4 +47,4 @@ LinksTab.defaultProps = {
   maxWidth: 480,
 };
 
-export default LinksTab;
+export default connect()(LinksTab);

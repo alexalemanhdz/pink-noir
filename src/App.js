@@ -1,7 +1,5 @@
 import React from 'react';
-
 import links from './links';
-
 import './App.css';
 import LinksTab from './components/LinksTab';
 
