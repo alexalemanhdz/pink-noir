@@ -25,6 +25,7 @@ function LinksTab(props) {
       <h1
         className={`tab-title${index === currentTab ? ' selected-tab' : ' unselected-tab'}`}
         style={{
+          borderLeftColor: (index === 0 ? 'transparent' : 'black'),
           left: index * (tabWidth - 10),
           width: tabWidth - 10,
           zIndex: index + (index === currentTab ? 3 : 1),
