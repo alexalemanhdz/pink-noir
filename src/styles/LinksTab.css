@@ -5,6 +5,9 @@
 .tab-title {
   background: rgb(255,255,255);
   background: linear-gradient(46deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%); 
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
   border-left-color: black;
   border-left-style: solid;
   border-left-width: 1px;
@@ -17,7 +20,8 @@
   padding-left: 10px;
   position: absolute;
   text-align: left;
-  top: -14px;
+  top: -15px;
+  user-select: none;
 }
 
 .links-list {
@@ -27,4 +31,8 @@
   border-left-width: 1px;
   margin: 0;
   z-index: 1;
+}
+
+.unselected-tab {
+  border-bottom-color: black;
 }

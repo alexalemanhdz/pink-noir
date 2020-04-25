@@ -20,8 +20,5 @@
 
 .tab-content {
   background-color: white;
-  border-left-color: black;
-  border-left-style: solid;
-  border-left-width: 1px;
   color: black;
 }

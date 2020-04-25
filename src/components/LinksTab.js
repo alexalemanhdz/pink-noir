@@ -7,6 +7,7 @@ import '../styles/LinksTab.css';
 function LinksTab(props) {
   const dispatch = useDispatch();
   const {
+    currentTab,
     index,
     maxTabs,
     maxWidth,
@@ -22,9 +23,9 @@ function LinksTab(props) {
       }}
     >
       <h1
-        className="tab-title"
+        className={`tab-title${index === currentTab ? ' selected-tab' : ' unselected-tab'}`}
         style={{
-          left: index * (tabWidth - 10) - 1,
+          left: index * (tabWidth - 10),
           maxWidth: tabWidth,
           minWidth: tabWidth,
           zIndex: 10 + index,
@@ -51,4 +52,9 @@ LinksTab.defaultProps = {
   maxWidth: 480,
 };
 
-export default connect()(LinksTab);
+const mapStateToProps = (state) => {
+  const { currentTab } = state.tabs;
+  return { currentTab };
+};
+
+export default connect(mapStateToProps)(LinksTab);
