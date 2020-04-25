@@ -1,6 +1,9 @@
 .media-container {
+  display: flex;
   height: 300px;
+  justify-content: center;
   margin-left: 5px;
+  overflow: hidden;
   width: 140px;
 }
 
@@ -11,4 +14,8 @@
   background-size: contain;
   height: 300px;
   width: 140px;
+}
+
+.jennie {
+  max-height: 300px;
 }
