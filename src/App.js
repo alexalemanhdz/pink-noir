@@ -5,7 +5,7 @@ import './App.css';
 import LinksTab from './components/LinksTab';
 import LinksDisplay from './components/LinksDisplay';
 import MediaContainer from './components/MediaContainer';
-import back from './assets/back.png';
+import back from './assets/back.jpg';
 
 function App(props) {
   const maxTabs = 6;
