@@ -1,4 +1,5 @@
 .links-list {
+  background-color: #ffffffaa;
   display: flex;
   flex-direction: column;
   height: 100%;

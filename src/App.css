@@ -4,6 +4,8 @@
 
 .App-header {
   background-color: #282a36;
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -25,6 +27,5 @@
 }
 
 .tab-content {
-  background-color: white;
   color: black;
 }

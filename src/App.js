@@ -5,6 +5,7 @@ import './App.css';
 import LinksTab from './components/LinksTab';
 import LinksDisplay from './components/LinksDisplay';
 import MediaContainer from './components/MediaContainer';
+import back from './assets/back.png';
 
 function App(props) {
   const maxTabs = 6;
@@ -27,7 +28,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" style={{ backgroundImage: `url(${back})` }}>
         <div className="container">
           <div className="tab-container">
             {tabs}
