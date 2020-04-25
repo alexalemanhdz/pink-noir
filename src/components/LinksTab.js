@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { changeTab } from '../redux/reducers';
+import { connect, useDispatch } from 'react-redux';
+import { changeTab } from '../redux/actions';
 import '../styles/LinksTab.css';
 
 function LinksTab(props) {
+  const dispatch = useDispatch();
   const {
     index,
     maxTabs,
@@ -28,7 +29,10 @@ function LinksTab(props) {
           minWidth: tabWidth,
           zIndex: 10 + index,
         }}
+        onClick={() => dispatch(changeTab(index))}
       >
+        {index + 1}
+        {' '}
         {tabName}
       </h1>
     </div>

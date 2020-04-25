@@ -12,7 +12,7 @@ function tabs(state = initialState, action) {
     case CHANGE_TAB:
       return {
         ...state,
-        currenttab: action.payload,
+        currentTab: action.payload,
       };
     default:
       return state;
