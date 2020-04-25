@@ -4,7 +4,7 @@
 
 .tab-title {
   background: rgb(255,255,255);
-  background: linear-gradient(46deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%); 
+  background: linear-gradient(46deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 76%, rgba(0,0,0,0) 76%, rgba(0,0,0,0) 100%);
   border-bottom-color: white;
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -20,7 +20,7 @@
   padding-left: 10px;
   position: absolute;
   text-align: left;
-  top: -15px;
+  top: -14px;
   user-select: none;
 }
 
@@ -35,4 +35,5 @@
 
 .unselected-tab {
   border-bottom-color: black;
+  top: -15px;
 }
