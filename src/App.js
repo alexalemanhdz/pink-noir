@@ -6,13 +6,21 @@ import './App.css';
 import LinksTab from './components/LinksTab';
 
 function App() {
-  const tabs = links.map((link, index) => (
-    <LinksTab
-      index={index}
-      key={`${link.tabName}-tab`}
-      tabName={link.tabName}
-    />
-  ));
+  const maxTabs = 6;
+
+  const tabs = links.map((link, index) => {
+    if (index < maxTabs) {
+      return (
+        <LinksTab
+          index={index}
+          key={`${link.tabName}-tab`}
+          tabName={link.tabName}
+          maxTabs={maxTabs}
+        />
+      );
+    }
+    return null;
+  });
 
   return (
     <div className="App">
