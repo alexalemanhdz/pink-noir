@@ -26,8 +26,7 @@ function LinksTab(props) {
         className={`tab-title${index === currentTab ? ' selected-tab' : ' unselected-tab'}`}
         style={{
           left: index * (tabWidth - 10),
-          maxWidth: tabWidth,
-          minWidth: tabWidth,
+          width: tabWidth - 10,
           zIndex: index + (index === currentTab ? 3 : 1),
         }}
         onClick={() => dispatch(changeTab(index))}

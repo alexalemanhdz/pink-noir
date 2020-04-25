@@ -4,7 +4,7 @@
 
 .tab-title {
   background: rgb(255,255,255);
-  background: linear-gradient(46deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 75%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 76%, rgba(0,0,0,0) 76%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(46deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 85%, rgba(0,0,0,1) 85%, rgba(0,0,0,1) 85%, rgba(0,0,0,1) 86%, rgba(0,0,0,0) 86%, rgba(0,0,0,0) 100%);
   border-bottom-color: white;
   border-bottom-style: solid;
   border-bottom-width: 1px;
