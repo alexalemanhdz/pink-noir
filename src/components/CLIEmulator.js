@@ -8,8 +8,14 @@ function CLIEmulator(props) {
       className="cli-emulator"
       autoFocus
       name="query"
-      placeholder="-u | -h | -4 | -3 | -g"
+      placeholder="url | 4ch | w3 | googl"
       style={props.style}
+      onKeyDown={(e) => {
+        if (e.keyCode === 13) {
+          const query = e.target.value;
+          console.log(query);
+        }
+      }}
     />
   );
 }
