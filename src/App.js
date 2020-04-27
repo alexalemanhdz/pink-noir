@@ -26,6 +26,7 @@ function App(props) {
     }
     return null;
   });
+  const tabsCount = links.length;
 
   return (
     <div className="App">
@@ -43,7 +44,7 @@ function App(props) {
           >
             <LinksDisplay linksList={links[props.currentTab].tabContent} />
           </div>
-          <CLIEmulator style={{ width: maxWidth - 10 }} />
+          <CLIEmulator style={{ width: maxWidth - 10 }} tabsCount={tabsCount} />
         </div>
         <MediaContainer currentTab={props.currentTab} />
       </header>
