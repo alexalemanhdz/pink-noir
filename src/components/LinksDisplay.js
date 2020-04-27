@@ -3,9 +3,13 @@ import { connect } from 'react-redux';
 import '../styles/LinksDisplay.css';
 
 function LinksDisplay(props) {
-  const linksList = props.linksList.map((link) => (
+  const linksList = props.linksList.map((link, index) => (
     <li key={link.id} className="link">
-      <a href={link.url}>{link.displayName}</a>
+      <a href={link.url}>
+        {index + 1}
+        {' '}
+        {link.displayName}
+      </a>
     </li>
   ));
 

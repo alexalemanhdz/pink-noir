@@ -3,19 +3,21 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-around;
+  justify-content: flex-start;
   list-style: none;
   padding: 0;
+  padding-top: 10px;
 }
 
 .link {
   display: flex;
-  justify-content: center;
+  padding-left: 10px;
 }
 
 .link a {
   color: black;
   font-family: monospace;
   font-size: 12px;
+  padding-bottom: 5px;
   text-decoration: none;
 }

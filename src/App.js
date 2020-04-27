@@ -9,8 +9,8 @@ import MediaContainer from './components/MediaContainer';
 import back from './assets/back.jpg';
 
 function App(props) {
-  const maxTabs = 6;
-  const maxWidth = 500;
+  const maxTabs = 3;
+  const maxWidth = 200;
 
   const tabs = links.map((link, index) => {
     if (index < maxTabs) {
