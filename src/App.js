@@ -4,6 +4,7 @@ import links from './links';
 import './App.css';
 import LinksTab from './components/LinksTab';
 import LinksDisplay from './components/LinksDisplay';
+import CLIEmulator from './components/CLIEmulator';
 import MediaContainer from './components/MediaContainer';
 import back from './assets/back.jpg';
 
@@ -36,12 +37,13 @@ function App(props) {
           <div
             className="tab-content"
             style={{
-              height: 300,
+              height: 278,
               width: maxWidth,
             }}
           >
             <LinksDisplay linksList={links[props.currentTab].tabContent} />
           </div>
+          <CLIEmulator style={{ width: maxWidth - 10 }} />
         </div>
         <MediaContainer currentTab={props.currentTab} />
       </header>
